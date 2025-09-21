@@ -13,15 +13,23 @@
             padding: 0;
             text-align: center;
             overflow-x: hidden;
-            /* Enable smooth scrolling */
             scroll-behavior: smooth;
         }
         .header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             padding: 20px;
             background-color: #1a1a1a;
             border-bottom: 2px solid #ff0000;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
         }
         .header img {
             width: 100px;
@@ -36,14 +44,10 @@
             animation: flash 1.5s infinite;
         }
         @keyframes flash {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.3;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
         }
-        .header a {
+        .header-right a {
             color: #ff0000;
             text-decoration: none;
             font-size: 18px;
@@ -51,7 +55,7 @@
             margin-right: 20px;
             text-shadow: 0 0 5px #ff0000;
         }
-        .header a:hover {
+        .header-right a:hover {
             text-decoration: underline;
         }
         .content {
@@ -66,7 +70,6 @@
             align-items: center;
             justify-content: center;
         }
-        /* New contact section styling */
         .contact {
             padding: 50px;
             max-width: 1000px;
@@ -75,7 +78,7 @@
             border: 2px solid #ff0000;
             box-shadow: 0 0 20px #ff0000;
             text-align: left;
-            margin-bottom: 60px; /* Space above footer */
+            margin-bottom: 60px;
         }
         .contact h2 {
             color: #ff0000;
@@ -150,10 +153,14 @@
 </head>
 <body>
     <div class="header">
-        <img src="logo.png" alt="Black Inferno Logo">
-        <h1>Black Inferno</h1>
-        <a href="https://github.com/blackinferno-sec" target="_blank">GitHub</a>
-        <a href="#contact">Seeking Justice?</a>
+        <div class="header-left">
+            <img src="logo.png" alt="Black Inferno Logo">
+            <h1>Black Inferno</h1>
+        </div>
+        <div class="header-right">
+            <a href="https://github.com/blackinferno-sec" target="_blank">GitHub</a>
+            <a href="#contact">Seeking Justice?</a>
+        </div>
     </div>
     <div class="content">
         <p>Welcome to the digital underworld, where Black Inferno reigns as an elite ethical hacking collective. We are a group of passionate cybersecurity experts dedicated to securing the net through the relentless pursuit of vulnerabilities. Operating in the shadows to protect the light, we uncover weaknesses before they can be exploited, ensuring a safer digital world. We are a collective group of ethical hackers on a mission to seek justice for victims that played no role in their own assault. 
@@ -161,14 +168,14 @@
     </div>
     <div class="contact" id="contact">
         <h2>Seeking Justice for a Cyber Crime?</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-            <label for="email" class="terminal-line">email:</label>
+        <form action="https://formspree.io/f/mgvnwwqz" method="POST">
+            <label for="email" class="terminal-line">Your email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="name" class="terminal-line">company/name:</label>
+            <label for="name" class="terminal-line">Your company/name:</label>
             <input type="text" id="name" name="name" required>
-            <label for="message" class="terminal-line">message:</label>
+            <label for="message" class="terminal-line">Your message:</label>
             <textarea id="message" name="message" rows="5"></textarea>
-            <button type="submit">Submit</button>
+            <button type="submit">Send</button>
         </form>
     </div>
     <div class="footer">
