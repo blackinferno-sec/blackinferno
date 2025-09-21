@@ -13,6 +13,8 @@
             padding: 0;
             text-align: center;
             overflow-x: hidden;
+            /* Enable smooth scrolling */
+            scroll-behavior: smooth;
         }
         .header {
             display: flex;
@@ -31,10 +33,8 @@
             font-size: 48px;
             text-shadow: 0 0 10px #ff0000;
             margin-left: 20px;
-            /* Added animation properties */
             animation: flash 1.5s infinite;
         }
-        /* Added keyframes for flashing effect */
         @keyframes flash {
             0%, 100% {
                 opacity: 1;
@@ -47,7 +47,7 @@
             color: #ff0000;
             text-decoration: none;
             font-size: 18px;
-            margin-left: auto;
+            margin-left: 20px;
             margin-right: 20px;
             text-shadow: 0 0 5px #ff0000;
         }
@@ -66,6 +66,76 @@
             align-items: center;
             justify-content: center;
         }
+        /* New contact section styling */
+        .contact {
+            padding: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #1a1a1a;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 20px #ff0000;
+            text-align: left;
+            margin-bottom: 60px; /* Space above footer */
+        }
+        .contact h2 {
+            color: #ff0000;
+            font-size: 28px;
+            text-shadow: 0 0 10px #ff0000;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .contact form {
+            background-color: #000000;
+            padding: 20px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            box-shadow: inset 0 0 10px #ff0000;
+        }
+        .contact label {
+            display: block;
+            color: #ff0000;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px #ff0000;
+        }
+        .contact input,
+        .contact textarea {
+            width: calc(100% - 20px);
+            background-color: #1a1a1a;
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 3px;
+            text-shadow: 0 0 5px #ff0000;
+        }
+        .contact input:focus,
+        .contact textarea:focus {
+            outline: none;
+            box-shadow: 0 0 10px #ff0000;
+        }
+        .contact button {
+            background-color: #ff0000;
+            color: #000000;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-shadow: 0 0 5px #000000;
+        }
+        .contact button:hover {
+            background-color: #cc0000;
+            box-shadow: 0 0 10px #ff0000;
+        }
+        .contact .terminal-line::before {
+            content: "> ";
+            color: #ff0000;
+            font-weight: bold;
+        }
         .footer {
             position: fixed;
             bottom: 0;
@@ -83,10 +153,23 @@
         <img src="logo.png" alt="Black Inferno Logo">
         <h1>Black Inferno</h1>
         <a href="https://github.com/blackinferno-sec" target="_blank">GitHub</a>
+        <a href="#contact">Seeking Justice?</a>
     </div>
     <div class="content">
         <p>Welcome to the digital underworld, where Black Inferno reigns as an elite ethical hacking collective. We are a group of passionate cybersecurity experts dedicated to securing the net through the relentless pursuit of vulnerabilities. Operating in the shadows to protect the light, we uncover weaknesses before they can be exploited, ensuring a safer digital world. We are a collective group of ethical hackers on a mission to seek justice for victims that played no role in their own assault. 
            Seeking justice for a cyber crime? Contact us at blackinferno_sec@proton.me</p>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Seeking Justice for a Cyber Crime?</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <label for="email" class="terminal-line">email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="name" class="terminal-line">company/name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="message" class="terminal-line">message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
     <div class="footer">
         <p>&copy; 2025 Black Inferno. All rights reserved. Hack ethically.</p>
