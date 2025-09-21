@@ -31,6 +31,17 @@
             font-size: 48px;
             text-shadow: 0 0 10px #ff0000;
             margin-left: 20px;
+            /* Added animation properties */
+            animation: flash 1.5s infinite;
+        }
+        /* Added keyframes for flashing effect */
+        @keyframes flash {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
         }
         .header a {
             color: #ff0000;
@@ -45,15 +56,15 @@
         }
         .content {
             padding: 50px;
-            font-size: 24px; /* Increased font size for larger text */
-            line-height: 1.8; /* Adjusted line height for better readability */
+            font-size: 24px;
+            line-height: 1.8;
             text-shadow: 0 0 5px #ff0000;
-            max-width: 1000px; /* Wider max-width to fill more space */
+            max-width: 1000px;
             margin: 0 auto;
-            min-height: calc(100vh - 200px); /* Ensure content fills page height minus header/footer */
+            min-height: calc(100vh - 200px);
             display: flex;
-            align-items: center; /* Vertically center content */
-            justify-content: center; /* Horizontally center content */
+            align-items: center;
+            justify-content: center;
         }
         .footer {
             position: fixed;
